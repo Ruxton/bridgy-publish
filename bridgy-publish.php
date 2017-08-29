@@ -30,6 +30,10 @@ function bridgy_plugin_init() {
 	add_action( 'init', array( 'Bridgy_Config', 'init' ) );
 	add_action( 'admin_menu', array( 'Bridgy_Config', 'admin_menu' ), 13 );
 
+	// Micropub Class
+	require_once( plugin_dir_path( __FILE__ ) . 'includes/class-bridgy-micropub.php' );
+	add_action( 'after_micropub', array('Bridgy_Micropub', 'do_micropub'));
+
 	// Post Meta Class
 	require_once( plugin_dir_path( __FILE__ ) . 'includes/class-bridgy-postmeta.php' );
 	add_action( 'init' , array( 'Bridgy_Postmeta', 'init' ) );
