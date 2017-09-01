@@ -32,7 +32,7 @@ function bridgy_plugin_init() {
 
 	// Micropub Class
 	require_once( plugin_dir_path( __FILE__ ) . 'includes/class-bridgy-micropub.php' );
-	add_action( 'after_micropub', array('Bridgy_Micropub', 'do_micropub'));
+	add_action( 'after_micropub', array('Bridgy_Micropub', 'do_micropub'), 10, 2);
 
 	// Post Meta Class
 	require_once( plugin_dir_path( __FILE__ ) . 'includes/class-bridgy-postmeta.php' );
