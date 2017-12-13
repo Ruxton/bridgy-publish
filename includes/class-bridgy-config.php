@@ -286,22 +286,22 @@ class Bridgy_Config {
 		if ( ! get_user_meta( get_current_user_id(), 'bridgy-twitter' ) ) {
 			self::bridgy_form( 'twitter', __( 'Register for Twitter', 'bridgy-publish' ) );
 		} else {
-			echo '<a href="' . get_user_meta( get_current_user_id(), 'bridgy-twitter', true ) . '">' . __( 'Twitter User Page', 'bridgy-publish' ) . '</a>';
+			echo '<p><a href="' . get_user_meta( get_current_user_id(), 'bridgy-twitter', true ) . '">' . __( 'Twitter User Page', 'bridgy-publish' ) . '</a></p>';
 		}
 		if ( ! get_user_meta( get_current_user_id(), 'bridgy-facebook' ) ) {
 			self::bridgy_form( 'facebook', __( 'Register for Facebook', 'bridgy-publish' ) );
 		} else {
-			echo '<a href="' . get_user_meta( get_current_user_id(), 'bridgy-facebook', true ) . '">' . __( 'Facebook User Page', 'bridgy-publish' ) . '</a>';
+			echo '<p><a href="' . get_user_meta( get_current_user_id(), 'bridgy-facebook', true ) . '">' . __( 'Facebook User Page', 'bridgy-publish' ) . '</a></p>';
 		}
 		if ( ! get_user_meta( get_current_user_id(), 'bridgy-googleplus' ) ) {
 			self::bridgy_form( 'googleplus', __( 'Register for Google Plus', 'bridgy-publish' ) );
 		} else {
-			echo '<a href="' . get_user_meta( get_current_user_id(), 'bridgy-googleplus', true ) . '">' . __( 'Google Plus User Page', 'bridgy-publish' ) . '</a>';
+			echo '<p><a href="' . get_user_meta( get_current_user_id(), 'bridgy-googleplus', true ) . '">' . __( 'Google Plus User Page', 'bridgy-publish' ) . '</a></p>';
 		}
 		if ( ! get_user_meta( get_current_user_id(), 'bridgy-instagram' ) ) {
 			self::bridgy_form( 'instagram', __( 'Register for Instagram', 'bridgy-publish' ) );
 		} else {
-			echo '<a href="' . get_user_meta( get_current_user_id(), 'bridgy-instagram', true ) . '">' . __( 'Instagram User Page', 'bridgy-publish' ) . '</a>';
+			echo '<p><a href="' . get_user_meta( get_current_user_id(), 'bridgy-instagram', true ) . '">' . __( 'Instagram User Page', 'bridgy-publish' ) . '</a></p>';
 		}
 		if ( ! get_user_meta( get_current_user_id(), 'bridgy-flickr' ) ) {
 			self::bridgy_form( 'flickr', __( 'Register for Flickr', 'bridgy-publish' ) );
@@ -355,5 +355,3 @@ class Bridgy_Config {
 	}
 
 } // End Class
-
-
